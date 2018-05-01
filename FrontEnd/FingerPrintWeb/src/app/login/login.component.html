@@ -1,31 +1,78 @@
-<div class="row">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FingerPrint Attendence System</title>
 
-  <div class="col-md-6">
+</head>
 
-    <h1>Login </h1>
+<body class="login-container">
 
-    <form>
+	<!-- Page container -->
+	<div class="page-container">
 
-      <div class="form-group">
+		<!-- Page content -->
+		<div class="page-content">
 
-        <label for="username">Email address:</label>
+			<!-- Main content -->
+			<div class="content-wrapper">
 
-        <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username">
+				<!-- Content area -->
+				<div class="content">
 
-      </div>
+					<!-- Simple login form -->
+					<form>
+						<div class="panel panel-body login-form">
+							<div class="text-center">
+								<div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
+								<h5 class="content-group">Login to your account <small class="display-block">Enter your credentials below</small></h5>
+							</div>
 
-      <div class="form-group">
+							<div class="form-group has-feedback has-feedback-left">
+								<input type="text" class="form-control" placeholder="Username">
+								<div class="form-control-feedback">
+									<i class="icon-user text-muted"></i>
+								</div>
+							</div>
 
-        <label for="pwd">Password:</label>
+							<div class="form-group has-feedback has-feedback-left">
+								<input type="text" class="form-control" placeholder="Password">
+								<div class="form-control-feedback">
+									<i class="icon-lock2 text-muted"></i>
+								</div>
+							</div>
 
-        <input type="password" class="form-control" id="passowrd" name="passowrd" [(ngModel)]="password">
+							<div class="form-group">
+								<button type="submit" class="btn bg-pink-400 btn-block">Sign in <i class="icon-circle-right2 position-right"></i></button>
+							</div>
 
-      </div>
+							<div class="text-center">
+								<a href="login_password_recover.html">Forgot password?</a>
+							</div>
+						</div>
+					</form>
+					<!-- /simple login form -->
 
-      <button class="btn btn-default" (click)="login()">Login</button>
 
-    </form>
+					<!-- Footer -->
+					<div class="footer text-muted text-center">
+						&copy; 2018. <a href="#">FingerPrint System</a>
+					</div>
+					<!-- /footer -->
 
-  </div>
+				</div>
+				<!-- /content area -->
 
-</div>
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+	</div>
+	<!-- /page container -->
+
+</body>
+</html>

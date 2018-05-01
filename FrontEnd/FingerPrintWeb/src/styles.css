@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/css/icons/icomoon/styles.css';
+@import 'assets/css/bootstrap.css';
+@import 'assets/css/core.css';
+@import 'assets/css/components.css';
+@import 'assets/css/colors.css';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900';

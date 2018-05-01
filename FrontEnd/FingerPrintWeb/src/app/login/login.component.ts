@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Route } from '@angular/router';
+import {Router} from "@angular/router";
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { Route } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router:Route) {
+  constructor(private router:Router) {
 
 
 

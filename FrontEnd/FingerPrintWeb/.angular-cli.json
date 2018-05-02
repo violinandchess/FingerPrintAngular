@@ -20,8 +20,16 @@
       "prefix": "app",
       "styles": [
         "styles.css"
+      
       ],
-      "scripts": [],
+      "scripts": ["assets/js/plugins/loaders/pace.min.js",
+      "assets/js/core/libraries/jquery.min.js",
+      "assets/js/core/libraries/bootstrap.min.js",
+      "assets/js/plugins/loaders/blockui.min.js",
+      "assets/js/core/app.js",
+      "assets/js/plugins/ui/ripple.min.js"
+
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

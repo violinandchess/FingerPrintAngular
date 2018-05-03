@@ -21,16 +21,17 @@
 
 				<!-- Content area -->
 				<div class="content">
-
+			
 					<!-- Simple login form -->
 					<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate >
-						<div class="panel panel-body login-form">
+						<div  class="panel panel-body login-form">
 							<div class="text-center">
+									<alert></alert>
 								<div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
 								<h5 class="content-group">Login to your account <small class="display-block">Enter your credentials below</small></h5>
 							</div>
 
-							<div class="form-group has-feedback has-feedback-left">
+							<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }" class="form-group has-feedback has-feedback-left">
 			   <input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="model.username" #username="ngModel" required > 
 			   <div *ngIf="f.submitted && !username.valid" class="empty-validate">Username is required</div>
 								<div class="form-control-feedback">
@@ -38,7 +39,7 @@
 								</div>
 							</div>
 
-							<div class="form-group has-feedback has-feedback-left">
+							<div [ngClass]="{ 'has-error': f.submitted && !password.valid }" class="form-group has-feedback has-feedback-left">
 								<input type="text" class="form-control" placeholder="Password" name="password"  [(ngModel)]="model.password" #password="ngModel" required >
 								<div *ngIf="f.submitted && !password.valid" class="empty-validate">Password is required</div>
 								<div class="form-control-feedback">

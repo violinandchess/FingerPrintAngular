@@ -32,17 +32,27 @@ export class LoginComponent implements OnInit {
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
   login() {
-    console.log("hii");
+
     this.loading = true;
     this.authenticationService.login(this.model.username, this.model.password)
         .subscribe(
             data => {
-                this.router.navigate([this.returnUrl]);
+
+                
+                if(data.success)
+                {
+                  this.returnUrl="/dashboard";
+                  this.router.navigate([this.returnUrl]);
+                }else{
+                  
+                  this.alertService.error(data.message);
+                  this.loading = false;
+                }
+            
             },
             error => {
                 
-                
-                        this.alertService.error(error);
+                this.alertService.error(error);
                 this.loading = false;
             });
   }

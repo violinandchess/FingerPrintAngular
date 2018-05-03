@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {Router,ActivatedRoute} from "@angular/router";
 import { NgModule } from '@angular/core';
+import { AlertService } from '../_services/alert.service';
+import { AuthenticationService } from '../_services/authentification.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,13 +10,25 @@ import { NgModule } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private route: ActivatedRoute,
 
+    private authenticationService: AuthenticationService,
+    private alertService: AlertService
+  ) {
+    
     
 
   }
 
   ngOnInit() {
   }
+
+  logout()
+  {
+   
+    this.authenticationService.logout()
+       
+  }
+  
 
 }

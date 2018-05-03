@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router,ActivatedRoute} from "@angular/router";
-import { NgModule } from '@angular/core';
+import { NgModule ,NgZone} from '@angular/core';
 import { AlertService } from '../_services/alert.service';
 import { AuthenticationService } from '../_services/authentification.service';
 @Component({
@@ -12,12 +12,12 @@ export class LoginComponent implements OnInit {
   model: any = {};
   loading = false;
   returnUrl: string;
-
+ 
   constructor( private route: ActivatedRoute,
     private router: Router,
     private authenticationService: AuthenticationService,
-    private alertService: AlertService
-  
+    private alertService: AlertService,private zone:NgZone
+    
   
   ) 
   {
@@ -42,7 +42,8 @@ export class LoginComponent implements OnInit {
                 if(data.success)
                 {
                   this.returnUrl="/dashboard";
-                  this.router.navigate([this.returnUrl]);
+                  this.zone.run(() => this.router.navigate([ this.returnUrl]))
+              
                 }else{
                   
                   this.alertService.error(data.message);

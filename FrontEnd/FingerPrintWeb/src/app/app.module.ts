@@ -13,12 +13,14 @@ import { AlertService } from './_services/alert.service';
 import {UserService } from './_services/user.service';
 import {AuthenticationService} from './_services/authentification.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UploadAttendenceComponent } from './upload-attendence/upload-attendence.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    AlertComponent
+    AlertComponent,
+    UploadAttendenceComponent
   ],
   imports: [
     BrowserModule,

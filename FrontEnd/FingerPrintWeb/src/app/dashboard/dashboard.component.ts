@@ -10,6 +10,8 @@ import { AuthenticationService } from '../_services/authentification.service';
 })
 export class DashboardComponent implements OnInit {
 
+  load_upload_attendence:boolean=false;
+
   constructor(private router:Router, private route: ActivatedRoute,
 
     private authenticationService: AuthenticationService,
@@ -23,6 +25,11 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
    
+  }
+  load_upload_attendence_component()
+  {
+    this.load_upload_attendence=true;
+
   }
 
   logout()

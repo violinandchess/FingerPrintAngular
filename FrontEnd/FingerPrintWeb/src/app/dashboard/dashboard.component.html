@@ -163,18 +163,11 @@
                 <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
                 <li class="active"><a href="index.html"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
                 <li>
-                  <a href="#"><i class="icon-stack2"></i> <span>Weekly Uploads</span></a>
+                  <a (click)="load_upload_attendence_component()" ref="#"><i class="icon-stack2"></i> <span>Weekly Uploads</span></a>
                   <ul>
-                    <li><a href="layout_navbar_fixed.html">Fixed navbar</a></li>
-                    <li><a href="layout_navbar_sidebar_fixed.html">Fixed navbar &amp; sidebar</a></li>
-                    <li><a href="layout_sidebar_fixed_native.html">Fixed sidebar native scroll</a></li>
-                    <li><a href="layout_navbar_hideable.html">Hideable navbar</a></li>
-                    <li><a href="layout_navbar_hideable_sidebar.html">Hideable &amp; fixed sidebar</a></li>
-                    <li><a href="layout_footer_fixed.html">Fixed footer</a></li>
-                    <li class="navigation-divider"></li>
-                    <li><a href="boxed_default.html">Boxed with default sidebar</a></li>
-                    <li><a href="boxed_mini.html">Boxed with mini sidebar</a></li>
-                    <li><a href="boxed_full.html">Boxed full width</a></li>
+                    <li><a href="layout_navbar_fixed.html">Upload Attendence</a></li>
+                    <li><a href="layout_navbar_sidebar_fixed.html">Check Upload History</a></li>
+                   
                   </ul>
                 </li>
                 <li>
@@ -288,143 +281,9 @@
         <!-- Content area -->
         <div class="content">
 
-          <!-- Main charts -->
-          <div class="row">
-            <div class="col-lg-12">
-
-              <!-- Traffic sources -->
-              <div class="panel panel-flat">
-                <div class="panel-heading">
-                  <h6 class="panel-title">Students Statistis</h6>
-                  <div class="heading-elements">
-                    <form class="heading-form" action="#">
-                      <div class="form-group">
-                        
-                      </div>
-                    </form>
-                  </div>
-                </div>
-
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <ul class="list-inline text-center">
-                        <li>
-                          <a href="#" class="btn border-teal text-teal btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-plus3"></i></a>
-                        </li>
-                        <li class="text-left">
-                          <div class="text-semibold">Total Students</div>
-                          <div class="text-muted">200</div>
-                        </li>
-                      </ul>
-
-                      <div class="col-lg-10 col-lg-offset-1">
-                        <div class="content-group" id="new-visitors"></div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                      <ul class="list-inline text-center">
-                        <li>
-                          <a href="#" class="btn border-warning-400 text-warning-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-watch2"></i></a>
-                        </li>
-                        <li class="text-left">
-                          <div class="text-semibold">Total Subjects</div>
-                          <div class="text-muted">12</div>
-                        </li>
-                      </ul>
-
-                      <div class="col-lg-10 col-lg-offset-1">
-                        <div class="content-group" id="new-sessions"></div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                      <ul class="list-inline text-center">
-                        <li>
-                          <a href="#" class="btn border-indigo-400 text-indigo-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-people"></i></a>
-                        </li>
-                        <li class="text-left">
-                          <div class="text-semibold">Total online</div>
-                          <div class="text-muted"><span class="status-mark border-success position-left"></span> 5,378 avg</div>
-                        </li>
-                      </ul>
-
-                      <div class="col-lg-10 col-lg-offset-1">
-                        <div class="content-group" id="total-online"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="position-relative" id="traffic-sources"></div>
-              </div>
-              <!-- /traffic sources -->
-
-            </div>
-
-            
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="panel panel-flat">
-								<div class="panel-heading">
-									<h6 class="panel-title">Attendence statistics<a class="heading-elements-toggle"><i class="icon-more"></i></a></h6>
-									<div class="heading-elements">
-										<form class="heading-form" action="#">
-											<div class="form-group">
-												<select class="change-date select-sm" id="select_date" style="display: none;">
-													<optgroup label="<i class='icon-watch pull-right'></i> Time period">
-														<option value="val1">June, 29 - July, 5</option>
-														<option value="val2">June, 22 - June 28</option>
-														<option value="val3" selected="selected">June, 15 - June, 21</option>
-														<option value="val4">June, 8 - June, 14</option>
-													</optgroup>
-												</select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-link text-semibold legitRipple" data-toggle="dropdown" title="June, 15 - June, 21"><span class="multiselect-selected-text"><span class="status-mark border-warning position-left"></span>June, 15 - June, 21</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu pull-right"><li class="multiselect-item multiselect-group"><label><i class="icon-watch pull-right"></i> Time period</label></li><li><a tabindex="0"><label class="radio"><div class="choice"><span><input value="val1" type="radio"></span></div> June, 29 - July, 5</label></a></li><li><a tabindex="0"><label class="radio"><div class="choice"><span><input value="val2" type="radio"></span></div> June, 22 - June 28</label></a></li><li class="active"><a tabindex="0"><label class="radio"><div class="choice"><span class="checked"><input value="val3" type="radio"></span></div> June, 15 - June, 21</label></a></li><li><a tabindex="0"><label class="radio"><div class="choice"><span><input value="val4" type="radio"></span></div> June, 8 - June, 14</label></a></li></ul></div>
-											</div>
-										</form>
-				                	</div>
-								</div>
-
-								<div class="container-fluid">
-									<div class="row text-center">
-										<div class="col-md-4">
-											<div class="content-group">
-												<h5 class="text-semibold no-margin"><i class="icon-calendar5 position-left text-slate"></i> 5,689</h5>
-												<span class="text-muted text-size-small">orders weekly</span>
-											</div>
-										</div>
-
-										<div class="col-md-4">
-											<div class="content-group">
-												<h5 class="text-semibold no-margin"><i class="icon-calendar52 position-left text-slate"></i> 32,568</h5>
-												<span class="text-muted text-size-small">orders monthly</span>
-											</div>
-										</div>
-
-										<div class="col-md-4">
-											<div class="content-group">
-												<h5 class="text-semibold no-margin"><i class="icon-cash3 position-left text-slate"></i> $23,464</h5>
-												<span class="text-muted text-size-small">average revenue</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="content-group-sm" id="app_sales"><svg width="430.41668701171875" height="255"><g transform="translate(50,5)" width="430.41668701171875"><g class="d3-axis d3-axis-horizontal d3-axis-solid" transform="translate(0,220)"><g class="tick" style="opacity: 1;" transform="translate(0,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Mon</text></g><g class="tick" style="opacity: 1;" transform="translate(58.40278116861979,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Tue</text></g><g class="tick" style="opacity: 1;" transform="translate(116.80556233723958,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Wed</text></g><g class="tick" style="opacity: 1;" transform="translate(175.20834350585938,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Thu</text></g><g class="tick" style="opacity: 1;" transform="translate(233.61112467447916,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Fri</text></g><g class="tick" style="opacity: 1;" transform="translate(292.013905843099,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Sat</text></g><g class="tick" style="opacity: 1;" transform="translate(350.41668701171875,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Sun</text></g><path class="domain" d="M0,6V0H350.41668701171875V6"></path></g><g class="d3-axis d3-axis-vertical d3-axis-transparent"><g class="tick" style="opacity: 1;" transform="translate(0,195.55555555555554)"><line x2="350.41668701171875" y2="0"></line><text dy=".32em" style="text-anchor: end;" x="-8" y="0">70</text></g><g class="tick" style="opacity: 1;" transform="translate(0,146.66666666666669)"><line x2="350.41668701171875" y2="0"></line><text dy=".32em" style="text-anchor: end;" x="-8" y="0">80</text></g><g class="tick" style="opacity: 1;" transform="translate(0,97.77777777777777)"><line x2="350.41668701171875" y2="0"></line><text dy=".32em" style="text-anchor: end;" x="-8" y="0">90</text></g><g class="tick" style="opacity: 1;" transform="translate(0,48.888888888888886)"><line x2="350.41668701171875" y2="0"></line><text dy=".32em" style="text-anchor: end;" x="-8" y="0">100</text></g><g class="tick" style="opacity: 1;" transform="translate(0,0)"><line x2="350.41668701171875" y2="0"></line><text dy=".32em" style="text-anchor: end;" x="-8" y="0">110</text></g><path class="domain" d="M350.41668701171875,0H0V220H350.41668701171875"></path></g><g class="lines" id="Alpha-line"><path class="d3-line d3-line-medium" style="stroke: rgb(76, 175, 80); opacity: 1;" d="M0,0Q46.72222493489583,69.42222222222223,58.40278116861979,73.33333333333334C75.92361551920573,79.20000000000002,99.28472798665364,35.44444444444446,116.80556233723958,39.11111111111112S157.68750915527343,99.97777777777777,175.20834350585938,97.77777777777777S216.0902903238932,28.11111111111112,233.61112467447916,24.444444444444457S274.4930714925131,75.53333333333335,292.013905843099,73.33333333333334Q303.69446207682296,71.86666666666667,350.41668701171875,9.777777777777768"></path><circle class="d3-line-circle d3-line-circle-medium" cx="0" cy="0" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(76, 175, 80); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="58.40278116861979" cy="73.33333333333334" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(76, 175, 80); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="116.80556233723958" cy="39.11111111111112" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(76, 175, 80); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="175.20834350585938" cy="97.77777777777777" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(76, 175, 80); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="233.61112467447916" cy="24.444444444444457" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(76, 175, 80); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="292.013905843099" cy="73.33333333333334" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(76, 175, 80); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="350.41668701171875" cy="9.777777777777768" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(76, 175, 80); opacity: 1;"></circle></g><g class="lines" id="Delta-line"><path class="d3-line d3-line-medium" style="stroke: rgb(255, 87, 34); opacity: 1;" d="M0,195.55555555555554Q46.72222493489583,227.33333333333334,58.40278116861979,220C75.92361551920573,209,99.28472798665364,129.55555555555557,116.80556233723958,122.22222222222223S157.68750915527343,178.44444444444446,175.20834350585938,171.11111111111111S216.0902903238932,81.4,233.61112467447916,73.33333333333334S274.4930714925131,115.86666666666666,292.013905843099,117.33333333333333Q303.69446207682296,118.3111111111111,350.41668701171875,83.11111111111111"></path><circle class="d3-line-circle d3-line-circle-medium" cx="0" cy="195.55555555555554" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(255, 87, 34); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="58.40278116861979" cy="220" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(255, 87, 34); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="116.80556233723958" cy="122.22222222222223" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(255, 87, 34); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="175.20834350585938" cy="171.11111111111111" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(255, 87, 34); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="233.61112467447916" cy="73.33333333333334" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(255, 87, 34); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="292.013905843099" cy="117.33333333333333" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(255, 87, 34); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="350.41668701171875" cy="83.11111111111111" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(255, 87, 34); opacity: 1;"></circle></g><g class="lines" id="Sigma-line"><path class="d3-line d3-line-medium" style="stroke: rgb(92, 107, 192); opacity: 1;" d="M0,146.66666666666669Q46.72222493489583,95.33333333333333,58.40278116861979,97.77777777777777C75.92361551920573,101.44444444444444,99.28472798665364,181.3777777777778,116.80556233723958,171.11111111111111S157.68750915527343,29.33333333333333,175.20834350585938,29.33333333333333S216.0902903238932,153.51111111111112,233.61112467447916,171.11111111111111S274.4930714925131,143.00000000000003,292.013905843099,146.66666666666669Q303.69446207682296,149.11111111111114,350.41668701171875,195.55555555555554"></path><circle class="d3-line-circle d3-line-circle-medium" cx="0" cy="146.66666666666669" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(92, 107, 192); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="58.40278116861979" cy="97.77777777777777" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(92, 107, 192); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="116.80556233723958" cy="171.11111111111111" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(92, 107, 192); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="175.20834350585938" cy="29.33333333333333" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(92, 107, 192); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="233.61112467447916" cy="171.11111111111111" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(92, 107, 192); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="292.013905843099" cy="146.66666666666669" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(92, 107, 192); opacity: 1;"></circle><circle class="d3-line-circle d3-line-circle-medium" cx="350.41668701171875" cy="195.55555555555554" r="3" style="fill: rgb(255, 255, 255); stroke: rgb(92, 107, 192); opacity: 1;"></circle></g></g></svg></div>
-								<div id="monthly-sales-stats"><svg width="430.41668701171875" height="100"><g transform="translate(35,20)" width="430.41668701171875"><g class="d3-axis d3-axis-horizontal d3-axis-solid" transform="translate(0,40)"><g class="tick" style="opacity: 1;" transform="translate(0,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Jul 01</text></g><g class="tick" style="opacity: 1;" transform="translate(72.08333740234376,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Jul 07</text></g><g class="tick" style="opacity: 1;" transform="translate(144.16667480468752,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Jul 13</text></g><g class="tick" style="opacity: 1;" transform="translate(216.25001220703123,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Jul 19</text></g><g class="tick" style="opacity: 1;" transform="translate(288.33334960937503,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Jul 25</text></g><g class="tick" style="opacity: 1;" transform="translate(360.41668701171875,0)"><line y2="4" x2="0"></line><text dy=".71em" style="text-anchor: middle;" y="12" x="0">Jul 31</text></g><path class="domain" d="M0,6V0H360.41668701171875V6"></path><line class="d3-axis-subticks" y1="0" y2="4" x1="0" x2="0"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="12.01388956705729" x2="12.01388956705729"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="24.02777913411458" x2="24.02777913411458"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="36.04166870117188" x2="36.04166870117188"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="48.05555826822916" x2="48.05555826822916"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="60.069447835286454" x2="60.069447835286454"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="72.08333740234376" x2="72.08333740234376"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="84.09722696940105" x2="84.09722696940105"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="96.11111653645833" x2="96.11111653645833"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="108.12500610351562" x2="108.12500610351562"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="120.13889567057291" x2="120.13889567057291"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="132.1527852376302" x2="132.1527852376302"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="144.16667480468752" x2="144.16667480468752"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="156.1805643717448" x2="156.1805643717448"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="168.1944539388021" x2="168.1944539388021"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="180.20834350585938" x2="180.20834350585938"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="192.22223307291665" x2="192.22223307291665"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="204.23612263997396" x2="204.23612263997396"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="216.25001220703123" x2="216.25001220703123"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="228.26390177408854" x2="228.26390177408854"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="240.27779134114581" x2="240.27779134114581"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="252.29168090820312" x2="252.29168090820312"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="264.3055704752604" x2="264.3055704752604"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="276.3194600423177" x2="276.3194600423177"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="288.33334960937503" x2="288.33334960937503"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="300.3472391764323" x2="300.3472391764323"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="312.3611287434896" x2="312.3611287434896"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="324.37501831054686" x2="324.37501831054686"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="336.3889078776042" x2="336.3889078776042"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="348.4027974446615" x2="348.4027974446615"></line><line class="d3-axis-subticks" y1="0" y2="4" x1="360.41668701171875" x2="360.41668701171875"></line></g><path class="d3-area" d="M0,6.184118060435697C0.5185101472876988,7.061254215950825,8.448437197657094,25.256032938118732,12.01388956705729,26.507378777231203S20.48863328911816,15.900523290796158,24.02777913411458,14.6170063246662S33.11874097416349,19.571521663858643,36.04166870117188,17.793394237526353S44.86567896628885,1.612127764055011,48.05555826822916,0S57.009663745750764,3.949733974789589,60.069447835286454,5.650035137034433S68.15112379149764,13.88569855631727,72.08333740234376,13.352073085031622S80.82677423047386,0.8397727428609574,84.09722696940105,2.3893183415319763S92.81998682257964,23.204081456871677,96.11111653645833,24.736472241742796S105.73341338607966,15.54106004958225,108.12500610351562,13.576950105411104S116.46625757264526,3.8993010528455376,120.13889567057291,5.00351370344343S128.71472731754062,19.405449949398175,132.1527852376302,20.801124385101897S140.70907967014705,16.132845191760865,144.16667480468752,14.757554462403375S152.1851266216,11.052209464289948,156.1805643717448,11.243851018974S165.31095649626388,14.112055185724254,168.1944539388021,15.91004919184821S176.32646109808368,26.916565891852173,180.20834350585938,26.226282501756852S188.23293987110057,11.390035023315503,192.22223307291665,11.63738580463809S200.60463050442974,26.55202803153942,204.23612263997396,27.71609276177091S213.04812522161555,20.94263676061425,216.25001220703123,19.339423752635277S224.5912636761609,14.580959520870833,228.26390177408854,15.685172171468729S236.43425925531872,25.77671529175607,240.27779134114581,26.563598032326073S249.23493666018246,22.306544960448413,252.29168090820312,20.604356992269853S261.3279241286614,14.932127329727368,264.3055704752604,13.183415319747013S272.941006345886,5.038845651536181,276.3194600423177,6.493323963457485S284.7652929235728,22.27967259602242,288.33334960937503,23.527758257203093S296.5808856609797,15.845431968251884,300.3472391764323,14.89810260014055S308.76730371188046,18.69924416033003,312.3611287434896,17.484188334504566S320.6298758680197,7.76022819402344,324.37501831054686,6.774420238931835S333.0918892194915,9.632103620964058,336.3889078776042,11.159522136331695S344.40309425580614,18.046207977126354,348.4027974446615,17.905832747716094S358.9855314306519,11.220344966075649,360.41668701171875,10.316233309908643L360.41668701171875,40C358.4143720838759,40,352.40742730034725,40,348.4027974446615,40S340.39353773329,40,336.3889078776042,40S328.37964816623264,40,324.37501831054686,40S316.36575859917536,40,312.3611287434896,40S304.3518690321181,40,300.3472391764323,40S292.3379794650608,40,288.33334960937503,40S280.3240898980035,40,276.3194600423177,40S268.3102003309462,40,264.3055704752604,40S256.29631076388887,40,252.29168090820312,40S244.2824211968316,40,240.27779134114581,40S232.26853162977432,40,228.26390177408854,40S220.25464206271698,40,216.25001220703123,40S208.2407524956597,40,204.23612263997396,40S196.22686292860243,40,192.22223307291665,40S184.21297336154512,40,180.20834350585938,40S172.19908379448788,40,168.1944539388021,40S160.18519422743054,40,156.1805643717448,40S148.17130466037327,40,144.16667480468752,40S136.157415093316,40,132.1527852376302,40S124.14352552625867,40,120.13889567057291,40S112.12963595920138,40,108.12500610351562,40S100.11574639214409,40,96.11111653645833,40S88.10185682508681,40,84.09722696940105,40S76.08796725802952,40,72.08333740234376,40S64.07407769097222,40,60.069447835286454,40S52.06018812391493,40,48.05555826822916,40S40.04629855685764,40,36.04166870117188,40S28.032408989800345,40,24.02777913411458,40S16.018519422743054,40,12.01388956705729,40S2.002314927842882,40,0,40Z" style="fill: rgb(77, 182, 172);"></path><g class="d3-crosshair-line" style="display: none;" transform="translate(156.1805643717448,40)"><line class="vertical-crosshair" y1="0" y2="-1423" style="stroke: rgb(229, 229, 229); shape-rendering: crispedges;"></line></g><g class="d3-crosshair-pointer" style="display: none;" transform="translate(156.1805643717448,11.243851018974)"><circle r="3" style="fill: rgb(255, 255, 255); stroke: rgb(77, 182, 172); stroke-width: 1;"></circle></g><g class="d3-crosshair-text" style="display: none;"><text dy="-10" style="" text-anchor="start" x="171.1805643717448px">Jul 14 - 1023 sales</text></g><rect class="d3-crosshair-overlay" style="fill: none; pointer-events: all;" width="360.41668701171875" height="40"></rect></g></svg></div>
-							</div>
-             
-
-            </div>
-
-            <div class="col-lg-5">
-
-
-            </div>
-          </div>
-          <!-- /main charts -->
-
+          <app-upload-attendence *ngIf="load_upload_attendence"></app-upload-attendence >
+   
+      
 
 
           <!-- Footer -->

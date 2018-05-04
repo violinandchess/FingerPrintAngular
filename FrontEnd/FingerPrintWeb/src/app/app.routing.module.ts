@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { 
      AuthGuard 
   } from './_guards/auth.guard';
+import { UploadAttendenceComponent } from './upload-attendence/upload-attendence.component';
 const routes: Routes = [
 
     {
